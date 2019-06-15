@@ -324,7 +324,8 @@
                     </div>
                 </div>
                 <div class="col-md-9 text-right mb-3 mb-md-0">
-                    <button class="btn btn-primary"><i class="fas fa-shopping-cart mr-1"></i>快速下單</button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#editModal" data-title="快速下單"
+                        data-backdrop='static'><i class="fas fa-shopping-cart mr-1"></i>快速下單</button>
                 </div>
             </div>
         </section>
@@ -353,7 +354,8 @@
                             <td>
                                 <div class="btn-group btn-group-sm" role="group"
                                     aria-label="Button group with nested dropdown">
-                                    <button type="button" class="btn btn-outline-secondary">編輯</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                                        data-target="#editModal" data-title="編輯 超纖細肥皂 1盒">編輯</button>
                                     <button type="button" class="btn btn-outline-secondary">查看</button>
 
                                     <div class="btn-group btn-group-sm">
@@ -365,7 +367,9 @@
                                             <a class="dropdown-item" href="#">操作紀錄</a>
                                             <a class="dropdown-item" href="#">資料匯出</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item text-danger" href="#">刪除資料</a>
+                                            <a class="dropdown-item text-danger" href="#" data-toggle="modal"
+                                                data-target="#removeModal" data-title="確認刪除 超纖細肥皂 1盒"
+                                                data-backdrop='static'>刪除資料</a>
                                         </div>
                                     </div>
                                 </div>
@@ -381,7 +385,8 @@
                             <td>
                                 <div class="btn-group btn-group-sm" role="group"
                                     aria-label="Button group with nested dropdown">
-                                    <button type="button" class="btn btn-outline-secondary">編輯</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                                        data-target="#editModal" data-title="編輯 (保證)無泡泡沐浴乳 5罐">編輯</button>
                                     <button type="button" class="btn btn-outline-secondary">查看</button>
 
                                     <div class="btn-group btn-group-sm">
@@ -393,7 +398,8 @@
                                             <a class="dropdown-item" href="#">操作紀錄</a>
                                             <a class="dropdown-item" href="#">資料匯出</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item text-danger" href="#">刪除資料</a>
+                                            <a class="dropdown-item text-danger" href="#" data-toggle="modal"
+                                                data-target="#removeModal" data-title="確認刪除 (保證)無泡泡沐浴乳 5罐">刪除資料</a>
                                         </div>
                                     </div>
                                 </div>
@@ -409,7 +415,8 @@
                             <td>
                                 <div class="btn-group btn-group-sm" role="group"
                                     aria-label="Button group with nested dropdown">
-                                    <button type="button" class="btn btn-outline-secondary">編輯</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                                        data-target="#editModal" data-title="編輯 防滑燈罩 100個">編輯</button>
                                     <button type="button" class="btn btn-outline-secondary">查看</button>
 
                                     <div class="btn-group btn-group-sm">
@@ -421,7 +428,8 @@
                                             <a class="dropdown-item" href="#">操作紀錄</a>
                                             <a class="dropdown-item" href="#">資料匯出</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item text-danger" href="#">刪除資料</a>
+                                            <a class="dropdown-item text-danger" href="#" data-toggle="modal"
+                                                data-target="#removeModal" data-title="確認刪除 防滑燈罩 100個">刪除資料</a>
                                         </div>
                                     </div>
                                 </div>
@@ -455,6 +463,83 @@
                 </table>
             </div>
         </section>
+        <nav aria-label="Page navigation" class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <footer class="bg-light pt-3 mt-4">
+            <p class="text-secondary text-center">六角學院後台管理系統</p>
+        </footer>
+    </div>
+
+
+    <!-- editModal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="Username">用戶名稱</label>
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
+                                placeholder="請輸入用戶名稱">
+                        </div>
+                        <div class="form-group">
+                            <label for="E-mail">E-mail address</label>
+                            <input type="email" class="form-control" id="E-mail" placeholder="Mark@mail.com">
+                        </div>
+                        <div class="d-flex">
+                            <div class="form-group w-50 mr-3">
+                                <label for="product">品項</label>
+                                <input type="text" class="form-control form-control-sm bg-light" id="product">
+                            </div>
+
+                            <div class="form-group w-50">
+                                <label for="number">*數量</label>
+                                <input type="number" class="form-control form-control-sm" id="number">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- removeModal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="font-weight-bold">是否確認刪除訂單</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+                    <button type="button" class="btn btn-outline-danger " style="width:76px;" >是</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
